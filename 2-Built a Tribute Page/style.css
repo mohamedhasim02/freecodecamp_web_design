@@ -1,0 +1,15 @@
+#main {
+    text-align: center;
+    padding: 20px;
+}
+
+#img-div {
+    margin-top: 20px;
+}
+
+#image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
