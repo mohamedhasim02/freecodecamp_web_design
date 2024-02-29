@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Add CSS styles here */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar styles */
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+    }
+
+    /* Welcome section styles */
+    #welcome-section {
+      height: 100vh; /* Set height equal to viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    /* Projects section styles */
+    #projects {
+      padding: 50px 0;
+    }
+
+    .project-tile {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: #ddd;
+      margin: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      /* Media query for smaller screens */
+      #navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center;
+        z-index: 1000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a href="#welcome-section">Welcome</a>
+    <a href="#projects">Projects</a>
+    <a id="profile-link" href="https://github.com/mohamedhasim02" target="_blank">My GitHub Profile</a>
+  </nav>
+
+  <!-- Welcome section -->
+  <section id="welcome-section">
+    <h1>Welcome to My Portfolio</h1>
+  </section>
+
+  <!-- Projects section -->
+  <section id="projects">
+    <div class="project-tile">
+      <a href="#">Project 1</a>
+    </div>
+  </section>
+
+</body>
+</html>
