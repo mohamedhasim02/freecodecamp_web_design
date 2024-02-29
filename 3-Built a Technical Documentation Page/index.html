@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Technical Documentation Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    </head>
+  <body>
+    <nav id="navbar">
+      <header>Sass Documentation</header>
+      <ul id="ul-navbar">
+        <li> <a class="nav-link" href="#introduction">Introduction</a></li>
+
+        <li> <a class="nav-link" href="#installation">Installation</a></li>
+
+        <li> <a class="nav-link" href="#sass_variables">Sass Variables</a></li>
+
+        <li> <a class="nav-link" href="#sass_nesting">Sass Nesting</a></li>
+
+        <li> <a class="nav-link" href="#sass_@import">Sass @import</a></li>
+
+        <li> <a class="nav-link" href="#sass_@mixin">Sass @mixin</a></li>
+
+        <li> <a class="nav-link" href="#sass_@extend">Sass @extend</a></li>
+
+        <li> <a class="nav-link" href="#reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
+        <p>Sass stands for Systematically Awesome Style Sheets.
+
+It is a CSS pre-processor. It is an extension of CSS that is used to add power and elegance to the basic language. It facilitates you to add variables, nested rules, mixins, inline imports, inheritance and more, all with fully CSS-compatible syntax.
+
+Sass is more stable and powerful CSS extension language that describes style of document cleanly and structurally. It is very useful to handle large style sheets by keeping them well organized and running quickly small style sheets.
+        </p>
+        <p>Features of Sass</p>
+        <ul>
+          <li>Sass is fully CSS-compatible.</li>
+          <li>It is more stable, powerful and elegant than CSS.</li>
+          <li>It is based on JavaScript and is superset of CSS.</li>
+          <li>It has its own syntax and compiles to readable CSS.</li>
+          <li>It is an open-source pre processor that is interpreted into CSS.</li>
+          <li>It supports language extensions such as variables, nesting, and mixins.</li>
+          <li>It provides many useful functions for manipulating colors and other values.</li>
+          <li>It provides many advanced features like control directives for libraries.</li>
+          <li>It provides well-formatted, customizable output.</li>
+          </ul>
+      </section>
+      <section class="main-section" id="installation">
+        <header>Installation</header>
+        <h4>System Requirements for Sass</h4>
+        <ul>
+          <li>Operating system - Sass is platform independent</li>
+          <li>Browser support - Sass works in Edge/IE (from IE 8), Firefox, Chrome, Safari, Opera</li>
+          <li>Programming language - Sass is based on Ruby</li>
+          </ul>
+          <p>Read more about Sass at the official Sass web site: <a href=" https://sass-lang.com/">Sass</a></p>
+          <h4>Install Sass</h4>
+      </section>
+      <section class="main-section" id="sass_variables">
+        <header>Sass Variables</header>
+        <article>
+          <p>Variables are a way to store information that you can re-use later.<br>
+
+With Sass, you can store information in variables, like:<br>
+<ul>
+  <li>Strings</li>
+  <li>Colors</li>
+  <li>Booleans</li>
+  <li>Numbers</li>
+  <li>Lists</li>
+  <li>Nulls</li>
+  </ul>
+  <p>Synatx: <code>$variablename: value;</code> </p>
+  <strong>Sass Variable Scope</strong><br> 
+  <p>Sass variables are only available at the level of nesting where they are defined.</p>
+
+  <strong>Using Sass !global</strong><br>
+  <p>The default behavior for variable scope can be overridden by using the !global switch.
+
+!global indicates that a variable is global, which means that it is accessible on all levels.</p> 
+          </article>
+      </section>
+      <section class="main-section" id="sass_nesting">
+        <header>Sass Nesting</header>
+        <article>
+          <p>Sass lets you nest CSS selectors in the same way as HTML.<br>
+
+Look at an example of some Sass code for a site's navigation:<br></p>
+<p>SCSS Syntax: <code>nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}</code></p>
+<strong>Sass Nested Properties</strong>
+<p>Many CSS properties have the same prefix, like font-family, font-size and font-weight or text-align, text-transform and text-overflow.</p>
+          </article>
+      </section>
+      <section class="main-section" id="sass_@import">
+        <header>Sass @import</header>
+        <article>
+          <p>Sass keeps the CSS code DRY (Don't Repeat Yourself). One way to write DRY code is to keep related code in separate files.</p>
+
+<p>You can create small files with CSS snippets to include in other Sass files. Examples of such files can be: reset file, variables, colors, fonts, font-sizes, etc. </p>
+<strong> Sass Importing Files</strong>
+<p>Just like CSS, Sass also supports the @import directive.</p>
+<p>
+The @import directive allows you to include the content of one file in another.</p>
+<p>The CSS @import directive has a major drawback due to performance issues; it creates an extra HTTP request each time you call it. However, the Sass @import directive includes the file in the CSS; so no extra HTTP call is required at runtime!</p>
+
+<p> Sass Import Syntax: <code>@import filename;</code>
+<p> Example: <code>@import "variables";<br>
+@import "colors";<br>
+@import "reset";<br> </code></p>
+
+<strong>Sass Partials</strong>
+<p>By default, Sass transpiles all the .scss files directly. However, when you want to import a file, you do not need the file to be transpiled directly.</p>
+
+<p>Sass has a mechanism for this: If you start the filename with an underscore, Sass will not transpile it. Files named this way are called partials in Sass.</p>
+
+<p>So, a partial Sass file is named with a leading underscore:</p>
+<code> _filename;</code>
+          </article>
+      </section>
+<section class="main-section" id="sass_@mixin">
+        <header>Sass @mixin</header>
+        <article>
+          <p>The @mixin directive lets you create CSS code that is to be reused throughout the website.</p>
+
+<p>The @include directive is created to let you use (include) the mixin.</p>
+
+<p> A mixin is defined with the @mixin directive.</p>
+<p>Example: <br></p>
+<code> @mixin name { <br>
+  property: value; <br>
+  property: value; <br>
+  ... <br>
+} <br> </code>
+<strong>Using a mixin</strong>
+<p>The @include directive is used to include a mixin.</p>
+<p>Example: </p><code> selector { <br>
+  @include mixin-name; <br>
+} <br> </code>
+
+<strong>Passing a Variable to Mixin</strong>
+<p>Mixins accept arguments. This way you can pass variables to a mixin.</p>
+
+          </article>
+    </section>
+    <section class="main-section" id="sass_@extend">
+        <header>Sass @extend</header>
+        <p>The @extend directive lets you share a set of CSS properties from one selector to another.</p>
+        <p>The @extend directive is useful if you have almost identically styled elements that only differ in some small details.</p>
+        <p>The following Sass example first creates a basic style for buttons (this style will be used for most buttons). Then, we create one style for a "Report" button and one style for a "Submit" button. Both "Report" and "Submit" button inherit all the CSS properties from the .button-basic class, through the @extend directive. In addition, they have their own colors defined.</p>
+  <p>By using the @extend directive, you do not need to specify several classes for an element in your HTML code, like this: &lt;button class="button-basic button-report"&gt;Report this&lt;/button&gt;. You just need to specify .button-report to get both sets of styles.</p>
+<p>The @extend directive helps keep your Sass code very DRY.</p>
+      </section>
+      <section class="main-section" id="reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>All the documentation in this page is taken from <a href="https://www.w3schools.com/sass/default.php">W3 Schools</a>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </body>
+  </html>
