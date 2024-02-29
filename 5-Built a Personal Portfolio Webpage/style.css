@@ -1,0 +1,56 @@
+/* Add CSS styles here */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+/* Welcome section styles */
+#welcome-section {
+  height: 100vh; /* Set height equal to viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+/* Projects section styles */
+#projects {
+  padding: 50px 0;
+}
+
+.project-tile {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  margin: 20px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  #navbar {
+    background-color: #555; /* Change navbar color for smaller screens */
+  }
+
+  #navbar a {
+    margin: 0 10px; /* Adjust margin for navbar links */
+  }
+}
